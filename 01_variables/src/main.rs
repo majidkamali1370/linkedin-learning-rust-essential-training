@@ -1,4 +1,5 @@
 fn main() {
+    // Variables are const by default
     let v1: i8 = 42;
     let v2: i16 = 42;
     let v3: i32 = 42;
@@ -10,6 +11,7 @@ fn main() {
         v1, v2, v3, v4, v5
     );
 
+    // Mutable variables
     let mut muv1: u8 = 1;
     let mut muv2: u16 = 1;
     let mut muv3: u32 = 1;
@@ -26,7 +28,7 @@ fn main() {
     muv3 += 100;
     muv4 += 1000;
     muv5 += 10000;
-    muv1 += v1 as u8;
+    muv1 += v1 as u8; // This is a cast
 
     println!(
         "muv1 = {}, muv2 = {}, muv3 = {}, muv4 = {}, muv5 = {}",
