@@ -1,10 +1,12 @@
 fn main() {
     let x = 4;
 
+    // There's no () around conditions
     if x > 5 {
         println!("x is more than 5");
     }
 
+    // Even a single-line body, has to have {}
     if x != 5 {
         println!("x is not 5");
     } else {
@@ -19,7 +21,7 @@ fn main() {
         println!("x < 10");
     }
 
-    let y = if x < 5 { x + 5 } else { x };
+    let y = if x < 5 { x + 5 } else { x }; // Conditional intialization
 
     println!("y is {y}");
 
