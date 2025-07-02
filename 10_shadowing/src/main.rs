@@ -1,6 +1,7 @@
 fn main() {
     let my_variable = "Hello World";
     println!("my_variable = {my_variable}");
+    // Shadowing. Makes the code more readable. No need to create extra intermediate variables
     let my_variable = "New String!";
     println!("my_variable = {my_variable}");
 
