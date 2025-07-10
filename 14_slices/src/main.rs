@@ -1,7 +1,7 @@
 fn main() {
     let message = "Hello, world from me!";
-    let world = &message[7..12];
-    let last_part = &message[13..];
+    let world = &message[7..12]; // Slice of string, from index 7 (including) to index 12 (excluding)
+    let last_part = &message[13..]; // Slice of string from index 13 onwards
 
     println!("last word in message is '{world}'");
     println!("last_part is '{last_part}'");
@@ -9,7 +9,7 @@ fn main() {
     let planets = [
         "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune",
     ];
-    let inner_planets = &planets[..4];
+    let inner_planets = &planets[..4]; // Slice of array, upto index 4 (excluding)
 
     println!("inner planets = {:?}", inner_planets);
 
@@ -25,11 +25,12 @@ fn main() {
 }
 
 fn find_first_word(s: &str) -> &str {
-    let b = s.as_bytes();
+    let b = s.as_bytes(); // Convert string slice to byte array
 
+    // Enumerate over the bytes using enumerate function of iterator
     for (index, &item) in b.iter().enumerate() {
         if item == b' ' {
-            return &s[..index];
+            return &s[..index]; // Returning a slice
         }
     }
 
